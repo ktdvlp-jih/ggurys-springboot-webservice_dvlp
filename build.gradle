@@ -32,8 +32,10 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('com.h2database:h2')
 
-//    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
-//    compile('org.springframework.session:spring-session-jdbc')
+    // 스프링 시큐리티 설정
+    // springboot-security-oauth2-client와 springboot-security-oauth2-jose를 기본으로 관리
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    compile('org.springframework.session:spring-session-jdbc')
 
     compile("org.mariadb.jdbc:mariadb-java-client")
 

@@ -7,13 +7,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import javax.persistence.*;
-/*
-* Posts클래스
-* 실제 DB 테이블과 매칭될 클래스이면 Entity클래스라고도 합니다.
-* JPA사용시 DB작업을 여기 Entity클래스의 수정을 통해 작업 됩니다.
-* */
-
-
 
 /*
  * Posts 클래스
@@ -28,6 +21,7 @@ import javax.persistence.*;
 @NoArgsConstructor // 5. lombok 어노테이션, 기본생성자 자동 추가
 @Entity // 1. JPA어노테이션 테이블과 링클될 클래스
 @EnableJpaAuditing // 날짜 자동 들록
+
 public class Posts extends BaseTimeEntity {
 
     @Id // 2. 해당 테이블의 PK필드를 의미

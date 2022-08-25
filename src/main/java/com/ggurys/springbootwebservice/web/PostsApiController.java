@@ -12,11 +12,14 @@ package com.ggurys.springbootwebservice.web;
  * */
 
 import com.ggurys.springbootwebservice.service.posts.PostsService;
+import com.ggurys.springbootwebservice.web.dto.PostsListResponseDto;
 import com.ggurys.springbootwebservice.web.dto.PostsResponseDto;
 import com.ggurys.springbootwebservice.web.dto.PostsSaveRequestDto;
 import com.ggurys.springbootwebservice.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor // 생성자 (선언된 모든 final필드가 포함된 생성자 생성 (final이 없는 필드는 생성자에 포함되지 않음))
 @RestController // 컨트롤러를 JSON을 반환 하는 컨트롤러로 만들어줌
@@ -44,5 +47,9 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
+    }
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll() {
+        return postsService.findAllDesc();
     }
 }
