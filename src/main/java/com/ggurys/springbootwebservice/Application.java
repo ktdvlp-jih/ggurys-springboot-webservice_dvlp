@@ -11,8 +11,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 //@RequiredArgsConstructor
 //@EnableJpaRepositories
-//@EnableJpaAuditing // JPA Auditing 활성화
+
+@EnableJpaAuditing // JPA Auditing 활성화
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
+//@SpringBootApplication
 //@SpringBootApplication(scanBasePackages = {"com.ggurys.springbootwebservice"})
 //@EnableJpaRepositories(basePackages = {"com.ggurys.springbootwebservice.domain.user"})
 

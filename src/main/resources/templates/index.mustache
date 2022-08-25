@@ -1,18 +1,13 @@
 {{>layout/header}}
 <h1>스프링 부트로 시작하는 웹서비스</h1>
 <div class="col-md-12">
-    <!--로그인 기능 영역-->
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
-
-            <!--로그인 되었을시 화면-->
             {{#userName}}
                 Logged in as: <span id="user">{{userName}}</span>
-                <a href="/logout" role="button" class="btn btn-info active">Logout</a>
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
             {{/userName}}
-
-            <!--로그인 안되어있을시 화면-->
             {{^userName}}
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
             {{/userName}}
