@@ -22,3 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+### 보안 ###
+# 보안에 관련된 내용을 깃에 올라가지않게 설정
+application-oauth.properties
