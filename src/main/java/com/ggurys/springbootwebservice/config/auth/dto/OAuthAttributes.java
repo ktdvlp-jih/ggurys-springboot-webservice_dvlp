@@ -24,11 +24,13 @@ public class OAuthAttributes {
         this.picture = picture;
     }
 
-    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes){
+    // 1
+    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
         // 여기서 네이버와 카카오 등 구분 (ofNaver, ofKakao)
 
         return ofGoogle(userNameAttributeName, attributes);
     }
+
 
     private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes) {
         return OAuthAttributes.builder()
@@ -40,6 +42,7 @@ public class OAuthAttributes {
                 .build();
     }
 
+    // 2.
     public User toEntity(){
         return User.builder()
                 .name(name)

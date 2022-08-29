@@ -10,7 +10,8 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class User extends BaseTimeEntity{
+public class User extends BaseTimeEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -39,6 +40,7 @@ public class User extends BaseTimeEntity{
     public User update(String name, String picture) {
         this.name = name;
         this.picture = picture;
+
         return this;
     }
 

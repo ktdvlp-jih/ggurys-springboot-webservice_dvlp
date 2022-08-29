@@ -23,7 +23,6 @@ public class HelloController {
     public String hello_안녕() {
 
         return "sitemap";
-
     }
 
     @GetMapping("/hello/dto")
